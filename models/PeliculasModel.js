@@ -47,7 +47,11 @@ const peliculasSchema = Schema(
     },
     puntuacion: {
       type: String,
-      required: true,
+      
+    },
+    trailerId: {
+      type: String
+      
     },
   },
   { timestamps: true }
