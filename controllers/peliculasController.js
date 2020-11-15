@@ -12,7 +12,7 @@ const crearPelicula = async (req, res, next) => {
     console.log(error);
     return res.status(500).json({
       ok: false,
-      msg: "Hable con el administrador",
+      msg: "Ya existe una pelicula con ese nombre",
     });
   }
 };
