@@ -12,9 +12,9 @@ route.get("/",getPeliculas)
 route.get("/:id",getPelicula)
 
 //borrar la pelicula por id
-route.delete("delete/:id",deletePelicula)
+route.delete("/delete/:id",deletePelicula)
 
 //Actualisar la pelicula por id
-route.put("update/:id",updatePelicula)
+route.put("/update/:id",updatePelicula)
 
 module.exports=route
