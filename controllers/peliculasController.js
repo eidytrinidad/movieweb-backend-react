@@ -90,7 +90,7 @@ const deletePelicula = async (req, res) => {
     console.log(error)
     return res.status(500).json({
       ok: false,
-      msg: 'Hable con el administrador'
+      msg: error
     })
   }
 
