@@ -4,6 +4,9 @@
   "description": "backend for movieweb page",
   "main": "index.js",
   "scripts": {
+    "build":"cd client && run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild":"npm run install-client && npm run build",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },

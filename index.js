@@ -9,7 +9,7 @@ const port=process.env.PORT||4000
 const app= express()
 
 //Middlewares
-app.use(express.static('public'))
+//app.use(express.static('public'))
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
@@ -22,6 +22,11 @@ dbConnection()
 
 //rutas
 app.use("/peliculas",require("./routes/peliculas"))
+
+if(process.env.NODE_ENV==='production')
+{
+    app.use(express.static('client/build'))
+}
 
 app.listen(port,()=>{
     console.log("Server Running on port: ",port)
